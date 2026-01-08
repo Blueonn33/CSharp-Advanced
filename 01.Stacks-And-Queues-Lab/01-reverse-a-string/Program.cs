@@ -4,7 +4,19 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string input = Console.ReadLine();
+
+            Stack<char> stack = new();
+
+            foreach (char c in input)
+            {
+                stack.Push(c);
+            }
+
+            foreach (var c in stack)
+            {
+                Console.Write(c);
+            }
         }
     }
 }
