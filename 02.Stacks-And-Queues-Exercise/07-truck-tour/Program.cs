@@ -5,44 +5,47 @@
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            int smallestIndex = Int32.MaxValue;
 
-            Queue<int> stations = new();
-            Queue<int> distances = new();
+            Queue<int[]> pumps = new();
 
             for (int i = 0; i < n; i++)
             {
-                int[] input = Console.ReadLine()
-                                .Split()
-                                .Select(int.Parse)
-                                .ToArray();
+                int[] pump = Console.ReadLine()
+                            .Split()
+                            .Select(int.Parse)
+                            .ToArray();
 
-                stations.Enqueue(input[0]);
-                distances.Enqueue(input[1]);
+                pumps.Enqueue(pump); 
             }
 
-            for (int i = 0; i < n; i++)
+            int pumpPosition = 0;
+
+            while (pumps.Count > 0)
             {
-                if (stations.Peek() >= distances.Peek())
+                int currentFuel = 0;
+                bool isPathValid = true;
+
+                foreach (var pump in pumps)
                 {
-                    if (smallestIndex > i)
+                    currentFuel += pump[0];
+                    currentFuel -= pump[1];
+
+                    if (currentFuel < 0)
                     {
-                        smallestIndex = i;
-                        stations.Dequeue();
-                        distances.Dequeue();
+                        pumps.Dequeue();
+                        pumpPosition++;
+                        isPathValid = false;
+                        break;
                     }
                 }
-                else
-                {
-                    int station = stations.Dequeue();
-                    stations.Enqueue(station);
 
-                    int distance = distances.Dequeue();
-                    distances.Enqueue(distance);
+                if (isPathValid)
+                {
+                    break;
                 }
             }
 
-            Console.WriteLine(smallestIndex);
+            Console.WriteLine(pumpPosition);
         }
     }
 }
