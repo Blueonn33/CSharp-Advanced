@@ -7,7 +7,7 @@
             char[] expression = Console.ReadLine().ToCharArray();
 
             Stack<char> openBrackets = new();
-            bool isBalanced = true;
+            bool isBalanced = false;
 
             for (int i = 0; i < expression.Length; i++)
             {
@@ -17,6 +17,8 @@
                 }
                 else
                 {
+                    isBalanced = true;
+
                     if (openBrackets.Count == 0)
                     {
                         isBalanced = false;
