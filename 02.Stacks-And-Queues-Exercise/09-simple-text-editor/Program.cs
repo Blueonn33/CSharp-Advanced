@@ -5,50 +5,40 @@
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            string command = "";
 
-            Stack<string> stack = new();
+            Stack<string> states = new();
 
             for (int i = 0; i < n; i++)
             {
-                command = Console.ReadLine();
-                string[] input = command.Split();
+                string[] command = Console.ReadLine()
+                   .Split();
+                string current = "";
 
-                string action = input[0];
+                if (states.Count > 0)
+                {
+                    current = states.Peek();
+                }
 
-                switch (action)
+                switch (command[0])
                 {
                     case "1":
-                        string text = input[1];
-                        stack.Push(text);
+                        current += command[1];
+                        states.Push(current);
                         break;
-
                     case "2":
-                        int remove = int.Parse(input[1]);
-                        string removeText = stack.Peek();
-
-                        if (removeText.Length == remove)
-                        {
-                            stack.Push("");
-                        }
-                        else
-                        {
-                            int length = removeText.Length - remove;
-                            removeText = removeText.Substring(0, length);
-                            stack.Push(removeText);
-                        }
-
+                        int count = int.Parse(command[1]);
+                        current = current.Remove(current.Length - count, count);
+                        states.Push(current);
                         break;
-
                     case "3":
-                        int index = int.Parse(input[1]) - 1;
-                        string indexText = stack.Peek();
-
-                        Console.WriteLine(indexText[index]);
+                        int index = int.Parse(command[1]) - 1;
+                        Console.WriteLine(current[index]);
                         break;
-
                     case "4":
-                        stack.Pop();
+                        if (states.Count > 0)
+                        {
+                            states.Pop();
+                        }
                         break;
                 }
             }
