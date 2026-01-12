@@ -28,14 +28,14 @@
             //Console.WriteLine(matrix.GetLength(0)); // number of rows
             //Console.WriteLine(matrix.GetLength(1)); // number of columns
 
-            for (int i = 0; i < matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrix.GetLength(1); j++)
-                {
-                    Console.Write(matrix[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
+            //for (int i = 0; i < matrix.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < matrix.GetLength(1); j++)
+            //    {
+            //        Console.Write(matrix[i, j] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
 
             string[,] textMatrix = new string[2, 5];
 
@@ -47,7 +47,15 @@
                 }
             }
 
-            PrintMatrix(textMatrix);
+            //PrintMatrix(textMatrix);
+
+            int[][] jaggedArray = new int[2][];
+            jaggedArray[0] = new int[3];
+            jaggedArray[1] = new int[5];
+
+            jaggedArray[0][1] = 17;
+
+            Console.WriteLine(jaggedArray[0][1]);
         }
         static void PrintMatrix(string[,] matrix)
         {
