@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36408.4 d17.14
+VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-unique-usernames", "01-unique-usernames\01-unique-usernames.csproj", "{A787B8A2-CC8E-4759-B2D9-E83DE644BA91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-sets-of-elements", "02-sets-of-elements\02-sets-of-elements.csproj", "{05E018C8-261F-4BC1-B98C-D8023D69B41C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-periodic-table", "03-periodic-table\03-periodic-table.csproj", "{F0D41388-E87D-4763-BF4C-262F1BC443E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{05E018C8-261F-4BC1-B98C-D8023D69B41C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05E018C8-261F-4BC1-B98C-D8023D69B41C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05E018C8-261F-4BC1-B98C-D8023D69B41C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0D41388-E87D-4763-BF4C-262F1BC443E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0D41388-E87D-4763-BF4C-262F1BC443E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0D41388-E87D-4763-BF4C-262F1BC443E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0D41388-E87D-4763-BF4C-262F1BC443E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
