@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-count-symbols", "05-coun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-wardrobe", "06-wardrobe\06-wardrobe.csproj", "{61F2AC00-11E6-4C85-A7D0-2CB3E952F128}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-the-v-logger", "07-the-v-logger\07-the-v-logger.csproj", "{A0187D91-AF8D-4602-9042-B65F0CB6CF14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionarySort", "DictionarySort\DictionarySort.csproj", "{628C1141-4FBE-461C-A2AF-38FEB48ADE3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{61F2AC00-11E6-4C85-A7D0-2CB3E952F128}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61F2AC00-11E6-4C85-A7D0-2CB3E952F128}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61F2AC00-11E6-4C85-A7D0-2CB3E952F128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0187D91-AF8D-4602-9042-B65F0CB6CF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0187D91-AF8D-4602-9042-B65F0CB6CF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0187D91-AF8D-4602-9042-B65F0CB6CF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0187D91-AF8D-4602-9042-B65F0CB6CF14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{628C1141-4FBE-461C-A2AF-38FEB48ADE3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{628C1141-4FBE-461C-A2AF-38FEB48ADE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{628C1141-4FBE-461C-A2AF-38FEB48ADE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{628C1141-4FBE-461C-A2AF-38FEB48ADE3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
