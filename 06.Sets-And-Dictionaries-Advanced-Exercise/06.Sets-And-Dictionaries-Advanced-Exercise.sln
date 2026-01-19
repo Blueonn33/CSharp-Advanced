@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionarySort", "Dictionar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08-ranking", "08-ranking\08-ranking.csproj", "{81B1F679-8658-466C-BCEA-9860A79E895E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-forcebook", "10-forcebook\10-forcebook.csproj", "{70BD392E-00B6-491B-8334-EE554EE36E66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{81B1F679-8658-466C-BCEA-9860A79E895E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81B1F679-8658-466C-BCEA-9860A79E895E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81B1F679-8658-466C-BCEA-9860A79E895E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70BD392E-00B6-491B-8334-EE554EE36E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70BD392E-00B6-491B-8334-EE554EE36E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70BD392E-00B6-491B-8334-EE554EE36E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70BD392E-00B6-491B-8334-EE554EE36E66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
