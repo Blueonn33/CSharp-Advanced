@@ -14,6 +14,27 @@
 
         public static void ExtractOddLines(string inputFilePath, string outputFilePath)
         {
+            using var reader = new StreamReader(inputFilePath);
+            using var writer = new StreamWriter(outputFilePath);
+
+            int lineNumber = 0;
+
+            while (true)
+            {
+                var line = reader.ReadLine();
+
+                if (line == null)
+                {
+                    break;
+                }
+
+                if (lineNumber % 2 == 1)
+                {
+                    writer.WriteLine(line);
+                }
+
+                lineNumber++;
+            }
         }
     }
 }
