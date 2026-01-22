@@ -25,7 +25,22 @@ namespace LineNumbers
 
                     while (line != null)
                     {
-                        writer.WriteLine($"Line {counter}: {line}");
+                        int lettersCount = 0;
+                        int punctuationCount = 0; 
+
+                        for (int i = 0; i < line.Length; i++)
+                        {
+                            if (char.IsLetter(line[i]))
+                            {
+                                lettersCount++;
+                            }
+                            else if (char.IsPunctuation(line[i]))
+                            {
+                                punctuationCount++;
+                            }
+                        }
+
+                        writer.WriteLine($"Line {counter}: {line} ({lettersCount}) ({punctuationCount})");
                         counter++;
 
                         line = reader.ReadLine();
