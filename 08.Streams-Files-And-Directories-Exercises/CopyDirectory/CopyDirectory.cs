@@ -16,22 +16,28 @@ namespace CopyDirectory
 
         public static void CopyAllFiles(string inputPath, string outputPath)
         {
-            using (FileStream inputStream = new FileStream(inputPath, FileMode.Open))
+            string[] filePaths = Directory.GetFiles(inputPath);
+
+            foreach (var filePath in filePaths)
             {
-                using (FileStream outputStream = new FileStream(outputPath, FileMode.OpenOrCreate))
+                FileInfo fileInfo = new FileInfo(filePath);
+
+                if (fileInfo == null)
                 {
-                    int n = 5;
-                    byte[] buffer = new byte[n];
-                    int readCount = inputStream.Read(buffer, 0, n);
-
-                    while (readCount > 0)
-                    {
-                        string parsedBuffer = Encoding.ASCII.GetString(buffer);
-
-                        outputStream.Write(buffer, 0, readCount);
-                        readCount = inputStream.Read(buffer, 0, n);
-                    }
+                    continue;
                 }
+
+                Console.WriteLine(fileInfo.FullName);
+                Console.WriteLine(fileInfo.Extension);
+
+                string newFilePath = $"{outputPath}/{fileInfo.Name}";
+
+                if (File.Exists(newFilePath))
+                {
+                    File.Delete(newFilePath);
+                }
+
+                File.Copy(filePath, outputPath);
             }
         }
     }
