@@ -1,4 +1,7 @@
-﻿namespace CopyDirectory
+﻿using System.IO;
+using System.Text;
+
+namespace CopyDirectory
 {
     using System;
     public class CopyDirectory
@@ -13,7 +16,23 @@
 
         public static void CopyAllFiles(string inputPath, string outputPath)
         {
-            throw new NotImplementedException();
+            using (FileStream inputStream = new FileStream(inputPath, FileMode.Open))
+            {
+                using (FileStream outputStream = new FileStream(outputPath, FileMode.OpenOrCreate))
+                {
+                    int n = 5;
+                    byte[] buffer = new byte[n];
+                    int readCount = inputStream.Read(buffer, 0, n);
+
+                    while (readCount > 0)
+                    {
+                        string parsedBuffer = Encoding.ASCII.GetString(buffer);
+
+                        outputStream.Write(buffer, 0, readCount);
+                        readCount = inputStream.Read(buffer, 0, n);
+                    }
+                }
+            }
         }
     }
 }
