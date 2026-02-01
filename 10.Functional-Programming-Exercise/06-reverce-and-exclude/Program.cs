@@ -1,0 +1,17 @@
+﻿int[] array = Console.ReadLine()
+    .Split()
+    .Select(int.Parse)
+    .ToArray();
+
+int n = int.Parse(Console.ReadLine());
+
+Func<int, int, bool> isNDivisibleFunc = IsNDivisible;
+
+int[] divisible = array.Where(x => isNDivisibleFunc(x,n)).Reverse().ToArray();
+
+Console.WriteLine(string.Join(" ", divisible));
+
+bool IsNDivisible (int number, int n)
+{
+    return number % n != 0;
+}
