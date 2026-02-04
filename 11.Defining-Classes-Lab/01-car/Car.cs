@@ -1,8 +1,9 @@
 ﻿using System.Text;
+using System.Text.Json.Serialization.Metadata;
 
 namespace CarManufacturer
 {
-    internal class Car
+    public class Car
     {
         public Car()
         {
@@ -24,6 +25,12 @@ namespace CarManufacturer
         {
             this.FuelQuantity = fuelQuantity;
             this.FuelConsumption = fuelConsumption;
+        }
+
+        public Car(string make, string model, int year, double fuelQuantity, double fuelConsumption, Engine engine, Tire[] tires) : this(make, model, year, fuelQuantity, fuelConsumption)
+        {
+            this.Engine = engine;
+            this.Tires = tires;
         }
 
         private string make;
@@ -76,6 +83,11 @@ namespace CarManufacturer
         {
             get; set;
         }
+
+        public Engine Engine { get; set; }
+        public Tire[] Tires { get; set; }
+
+
 
         public void Drive(double distance)
         {
