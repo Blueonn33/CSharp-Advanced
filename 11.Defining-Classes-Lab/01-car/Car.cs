@@ -1,7 +1,31 @@
-﻿namespace CarManufacturer
+﻿using System.Text;
+
+namespace CarManufacturer
 {
     internal class Car
     {
+        public Car()
+        {
+            this.Make = "VW";
+            this.Model = "Golf";
+            this.Year = 2025;
+            this.FuelQuantity = 200;
+            this.FuelConsumption = 10;
+        }
+
+        public Car(string make, string model, int year) : this()
+        {
+            this.Make = make;
+            this.Model = model;
+            this.Year = year;
+        }
+
+        public Car(string make, string model, int year, double fuelQuantity, double fuelConsumption) : this(make, model, year)
+        {
+            this.FuelQuantity = fuelQuantity;
+            this.FuelConsumption = fuelConsumption;
+        }
+
         private string make;
         private string model;
         private int year;
@@ -69,10 +93,14 @@
 
         public string WhoAmI()
         {
-            return @$"Make: {this.Make}
-Model: {this.Model}
-Year: {this.Year}
-Fuel: {this.FuelQuantity:F2}";
+            var result = new StringBuilder();
+
+            result.AppendLine($"Make: {this.Make}");
+            result.AppendLine($"Model: {this.Model}");
+            result.AppendLine($"Year: {this.Year}");
+            result.AppendLine($"Fuel: {this.FuelQuantity:F2}");
+
+            return result.ToString();
         }
     }
 }

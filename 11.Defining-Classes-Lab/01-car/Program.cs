@@ -4,14 +4,15 @@
     {
         static void Main()
         {
-            var car = new Car()
-            {
-                Make = "Aston Martin",
-                Model = "Vulcan",
-                Year = 2026,
-                FuelQuantity = 100,
-                FuelConsumption = 10
-            };
+            string make = Console.ReadLine();
+            string model = Console.ReadLine();
+            int year = int.Parse(Console.ReadLine());
+            double fuelQuantity = double.Parse(Console.ReadLine());
+            double fuelConsumption = double.Parse(Console.ReadLine());
+
+            Car car = new Car();
+            Car secondCar = new Car(make, model, year);
+            Car thirdCar = new Car(make, model, year, fuelQuantity, fuelConsumption);
         }
     }
 }
