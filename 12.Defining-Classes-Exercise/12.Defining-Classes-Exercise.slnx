@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="01-define-a-class-person/01-define-a-class-person.csproj" />
   <Project Path="06-speed-racing/06-speed-racing.csproj" Id="9267d6b9-d076-40a1-8214-fe51acd3c1f8" />
+  <Project Path="07-raw-data/07-raw-data.csproj" Id="7623052c-3290-40b0-a8ac-4662e1924283" />
 </Solution>
