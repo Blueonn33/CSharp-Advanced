@@ -11,6 +11,7 @@ namespace DefiningClasses
     {
         public static void Main(string[] args)
         {
+            Person raya = new Person("Raya", 18);
         }
     }
 }
