@@ -73,6 +73,38 @@ namespace DefiningClasses
             return people;
         }
 
+        public List<Person> FilterMembers(Func<Person, bool> filter)
+        {
+            List<Person> filteredMembers = new();
+
+            foreach (var person in family)
+            {
+                if (filter(person))
+                {
+                    filteredMembers.Add(person);
+                }
+            }
+
+            return filteredMembers;
+        }
+
+        public List<Person> SortMembers(List<Person> members)
+        {
+            return members.OrderBy(m => m.Name).ToList();
+        }
+
+        public void PrintMembers(int ageTreshold)
+        {
+            List<Person> filteredMembers = FilterMembers(p => p.Age > ageTreshold);
+
+            filteredMembers = SortMembers(filteredMembers);
+
+            foreach (var person in filteredMembers)
+            {
+                Console.WriteLine($"{person.Name} - {person.Age}");
+            }
+        }
+
         //public Person GetOldestMember(List<Person> family)
         //{
         //    Person oldestPerson = new Person()

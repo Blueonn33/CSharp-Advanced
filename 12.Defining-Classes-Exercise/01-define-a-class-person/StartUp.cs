@@ -11,29 +11,39 @@ namespace DefiningClasses
     {
         public static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            Family family = new Family();
+            //int n = int.Parse(Console.ReadLine());
+            //Family family = new Family();
 
-            for (int i = 0; i < n; i++)
-            {
-                string[] input = Console.ReadLine().Split();
+            //for (int i = 0; i < n; i++)
+            //{
+            //    string[] input = Console.ReadLine().Split();
 
-                string name = input[0];
-                int age = int.Parse(input[1]);
+            //    string name = input[0];
+            //    int age = int.Parse(input[1]);
 
-                Person person = new Person(name, age);
-                family.AddMember(person);
-            }
+            //    Person person = new Person(name, age);
+            //    family.AddMember(person);
+            //}
 
             //Person oldest = family.GetOldestMember();
             //Console.WriteLine($"{oldest.Name} {oldest.Age}");
 
-            List<Person> peopleVote = family.OpinionPoll();
+            //List<Person> peopleVote = family.OpinionPoll();
 
-            foreach (Person person in peopleVote)
-            {
-                Console.WriteLine($"{person.Name} - {person.Age}");
-            }
+            //foreach (Person person in peopleVote)
+            //{
+            //    Console.WriteLine($"{person.Name} - {person.Age}");
+            //}
+
+            //family.PrintMembers(30);
+
+            string date1 = Console.ReadLine();
+            string date2 = Console.ReadLine();
+
+            DateModifier dateModifier = 
+                new DateModifier(date1, date2);
+
+            Console.WriteLine(dateModifier.CalculateDayDiff());
         }
     }
 }
