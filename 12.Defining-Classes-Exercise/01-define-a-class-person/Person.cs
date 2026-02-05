@@ -14,12 +14,12 @@ namespace DefiningClasses
             this.Age = 1;
         }
 
-        public Person(int age) :this()
+        public Person(int age) : this()
         {
             this.Age = age;
         }
 
-        public Person(string name, int age) :this(age)
+        public Person(string name, int age) : this(age)
         {
             this.Name = name;
         }
@@ -27,8 +27,57 @@ namespace DefiningClasses
         private string name;
         private int age;
 
-        public string Name { get; set; }
+        public string Name
+        {
+            get; set;
+        }
 
-        public int Age { get; set; }
+        public int Age
+        {
+            get; set;
+        }
+    }
+
+    public class Family
+    {
+        public Family()
+        {
+            family = new List<Person>();
+        }
+
+        private List<Person> family;
+
+        public void AddMember(Person person)
+        {
+            family.Add(person);
+        }
+
+        public Person GetOldestMember()
+        {
+            Person oldest = family.OrderByDescending(p => p.Age)
+                .FirstOrDefault();
+
+            return oldest;
+        }
+
+        //public Person GetOldestMember(List<Person> family)
+        //{
+        //    Person oldestPerson = new Person()
+        //    {
+        //        Name = " ",
+        //        Age = 0
+        //    };
+
+        //    foreach (Person person in family)
+        //    {
+        //        if (person.Age > oldestPerson.Age)
+        //        {
+        //            oldestPerson.Name = person.Name;
+        //            oldestPerson.Age = person.Age;
+        //        }
+        //    }
+
+        //    return oldestPerson;
+        //}
     }
 }
