@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,6 +59,18 @@ namespace DefiningClasses
                 .FirstOrDefault();
 
             return oldest;
+        }
+
+        public List<Person> OpinionPoll()
+        {
+            List<Person> people = new List<Person>();
+
+            people = family
+                .OrderBy(p => p.Name)
+                .Where(p => p.Age > 30)
+                .ToList();
+
+            return people;
         }
 
         //public Person GetOldestMember(List<Person> family)
