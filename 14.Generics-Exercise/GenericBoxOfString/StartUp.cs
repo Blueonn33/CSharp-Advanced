@@ -6,27 +6,29 @@ namespace GenericBoxOfString
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            BoxList<int> list = new();
+            BoxList<string> list = new();
 
             for (int i = 0; i < n; i++)
             {
                 string word = Console.ReadLine();
-                Box<int> box = new(int.Parse(word));
+                Box<string> box = new(word);
 
                 list.Data.Add(box);
             }
 
-            int[] indexes = Console.ReadLine()
-                .Split()
-                .Select(int.Parse)
-                .ToArray();
+            //int[] indexes = Console.ReadLine()
+            //    .Split()
+            //    .Select(int.Parse)
+            //    .ToArray();
 
-            list.Swap(indexes[0], indexes[1]);
+            //list.Swap(indexes[0], indexes[1]);
 
-            foreach (var box in list.Data)
-            {
-                Console.WriteLine(box);
-            }
+            //foreach (var box in list.Data)
+            //{
+            //    Console.WriteLine(box);
+            //}
+
+            Console.WriteLine(list.GetBiggerBoxes(new Box<string>(Console.ReadLine())));
         }
     }
 }

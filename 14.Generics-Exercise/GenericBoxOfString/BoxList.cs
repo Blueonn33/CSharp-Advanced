@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GenericBoxOfString
 {
-    public class BoxList<T>
+    public class BoxList<T> where T : IComparable<T>
     {
         public BoxList()
         {
@@ -21,6 +21,13 @@ namespace GenericBoxOfString
             Box<T> temp = Data[firstIndex];
             Data[firstIndex] = Data[secondIndex];
             Data[secondIndex] = temp;
+        }
+
+        public int GetBiggerBoxes(Box<T> box)
+        {
+            List<Box<T>> biggerBoxes = Data.Where(b => b.CompareTo(box) > 0).ToList();
+
+            return biggerBoxes.Count;
         }
     }
 }

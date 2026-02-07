@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GenericBoxOfString
 {
-    public class Box<T>
+    public class Box<T> : IComparable<Box<T>> where T : IComparable<T>
     {
         public Box(T value)
         {
@@ -15,6 +15,21 @@ namespace GenericBoxOfString
         }
 
         public T Value { get; set; }
+
+        public int CompareTo(Box<T>? other)
+        {
+            return Value.CompareTo(other.Value);
+        }
+
+        //public bool IsGreater(T other)
+        //{
+        //    if (other.CompareTo(Value) > 1)
+        //    {
+        //        return true;
+        //    }
+
+        //    return false;
+        //}
 
         public override string ToString()
         {
