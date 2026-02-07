@@ -10,7 +10,7 @@ namespace GenericBoxOfString
             for (int i = 0; i < n; i++)
             {
                 string word = Console.ReadLine();
-                Box<string> box = new(word);
+                Box<int> box = new(int.Parse(word));
 
                 Console.WriteLine(box);
             }
