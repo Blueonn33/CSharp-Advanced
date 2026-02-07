@@ -1,5 +1,5 @@
 <Solution>
   <Project Path="01-box/BoxOfT.csproj" />
-  <Project Path="02-generic-array-creator/02-generic-array-creator.csproj" />
+  <Project Path="GenericArrayCreator/GenericArrayCreator.csproj" />
   <Project Path="Playground/Playground.csproj" />
 </Solution>
