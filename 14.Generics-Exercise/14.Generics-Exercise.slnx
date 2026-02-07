@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="GenericBoxOfString/GenericBoxOfString.csproj" />
+  <Project Path="Treeuple/Threeuple.csproj" />
   <Project Path="Tuple/Tuple.csproj" />
 </Solution>
