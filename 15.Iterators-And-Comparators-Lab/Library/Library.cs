@@ -12,17 +12,61 @@ namespace IteratorsAndComparators
         private List<Book> libraryBooks;
         public Library(params Book[] books)
         {
-            this.libraryBooks = books.ToList();        
+            this.libraryBooks = books.ToList();
         }
 
         public IEnumerator<Book> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return new LibraryIterator(this.libraryBooks);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+        private class LibraryIterator : IEnumerator<Book>
+        {
+            private List<Book> books;
+            private int currentIndex;
+
+            public LibraryIterator(List<Book> books)
+            {
+                this.books = books;
+                this.Reset();
+            }
+
+            public bool MoveNext()
+            {
+                this.currentIndex++;
+
+                if (this.currentIndex == books.Count)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+
+            public void Reset()
+            {
+                this.currentIndex = -1;
+            }
+
+            public Book Current
+            {
+                get
+                {
+                    return this.books[this.currentIndex];
+                }
+            }
+
+            object? IEnumerator.Current => Current;
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
