@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="Library/IteratorsAndComparators.csproj" />
+  <Project Path="Playground/Playground.csproj" Id="738ad846-4edc-4c95-b545-e4892cd9a196" />
 </Solution>
