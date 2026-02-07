@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="01-box/BoxOfT.csproj" />
   <Project Path="GenericArrayCreator/GenericArrayCreator.csproj" />
+  <Project Path="GenericScale/GenericScale.csproj" />
   <Project Path="Playground/Playground.csproj" />
 </Solution>

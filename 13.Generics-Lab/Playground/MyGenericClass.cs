@@ -81,6 +81,8 @@ namespace Playground
             var myList = classExample.CreateList([4, 4, 3, 2, 4, 5]);
                 
             Console.WriteLine(myList.Count);
+
+            var cats = new AnimalCollection<Cat>();
         }
     }
 }
