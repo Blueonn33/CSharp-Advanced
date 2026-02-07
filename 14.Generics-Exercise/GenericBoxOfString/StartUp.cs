@@ -6,12 +6,14 @@ namespace GenericBoxOfString
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            BoxList<string> list = new();
+            //BoxList<string> list = new();
+            BoxList<double> list = new();
 
             for (int i = 0; i < n; i++)
             {
                 string word = Console.ReadLine();
-                Box<string> box = new(word);
+                //Box<string> box = new(word);
+                Box<double> box = new(double.Parse(word));
 
                 list.Data.Add(box);
             }
@@ -28,7 +30,8 @@ namespace GenericBoxOfString
             //    Console.WriteLine(box);
             //}
 
-            Console.WriteLine(list.GetBiggerBoxes(new Box<string>(Console.ReadLine())));
+            Console.WriteLine(list.GetBiggerBoxes(
+                new Box<double>(double.Parse(Console.ReadLine()))));
         }
     }
 }
