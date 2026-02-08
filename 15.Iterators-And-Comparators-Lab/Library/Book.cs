@@ -38,13 +38,15 @@
 
 public class BookComparator : IComparer<Book>
 {
-    public int Compare(Book x, Book y)
+    public int Compare(Book first, Book second)
     {
-        int result = x.Year.CompareTo(y.Year);
-        if (result == 0)
+        var titleComparison = first.Title.CompareTo(second.Title);
+
+        if (titleComparison != 0)
         {
-            result = x.Title.CompareTo(y.Title);
+            return titleComparison;
         }
-        return result;
+
+        return second.Year.CompareTo(first.Year);
     }
 }
