@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="Froggy/Froggy.csproj" />
   <Project Path="ListyIterator/ListyIterator.csproj" />
+  <Project Path="People/People.csproj" Id="7deaba45-1b1a-476e-9ee4-811abffb4a79" />
   <Project Path="Stack/Stack.csproj" />
 </Solution>
