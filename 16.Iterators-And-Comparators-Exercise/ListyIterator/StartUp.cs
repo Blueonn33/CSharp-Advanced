@@ -1,4 +1,6 @@
-﻿namespace ListyIterator
+﻿using System.Threading.Channels;
+
+namespace ListyIterator
 {
     public class StartUp
     {
@@ -46,6 +48,16 @@
                     {
                         Console.WriteLine(ex.Message);
                     }
+                }
+
+                if (input[0] == "PrintAll")
+                {
+                    foreach (var item in iterator)
+                    {
+                        Console.Write($"{item} ");
+                    }
+
+                    Console.WriteLine();
                 }
 
                 command = Console.ReadLine();

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ListyIterator
 {
-    public class ListyIterator<T> : IEnumerator<T>
+    public class ListyIterator<T> : IEnumerator<T>, IEnumerable<T>
     {
         private List<T> data;
         private int index;
@@ -67,5 +67,17 @@ namespace ListyIterator
         //        Console.WriteLine(Current);
         //    }
         //}
+        public IEnumerator<T> GetEnumerator()
+        {
+            foreach (var item in data)
+            {
+                yield return item;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }
