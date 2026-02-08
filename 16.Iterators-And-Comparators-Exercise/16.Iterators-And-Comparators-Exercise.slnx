@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="CustomComparator/CustomComparator.csproj" Id="2a073f30-1414-4307-aeca-177160834127" />
   <Project Path="Froggy/Froggy.csproj" />
   <Project Path="ListyIterator/ListyIterator.csproj" />
   <Project Path="People/People.csproj" Id="7deaba45-1b1a-476e-9ee4-811abffb4a79" />
