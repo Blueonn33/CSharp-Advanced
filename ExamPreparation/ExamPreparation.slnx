@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="02-bomb-has-been-planted/02-bomb-has-been-planted.csproj" />
+  <Project Path="03-data-center/03-data-center.csproj" Id="515ffb50-3f25-4b88-a86b-b4b0a537d33c" />
   <Project Path="ExamPreparation/01-climb-the-peaks.csproj" />
 </Solution>
