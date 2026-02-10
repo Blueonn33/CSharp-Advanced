@@ -19,7 +19,7 @@ while (times.Count > 0)
     if (taskTime <= 60)
     {
         darthVaderDuckyCount++;
-    }
+    } 
     else if (taskTime <= 120)
     {
         thorDuckyCount++;
