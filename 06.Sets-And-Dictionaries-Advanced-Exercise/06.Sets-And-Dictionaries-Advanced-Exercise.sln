@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36408.4
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11430.68 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-unique-usernames", "01-unique-usernames\01-unique-usernames.csproj", "{A787B8A2-CC8E-4759-B2D9-E83DE644BA91}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08-ranking", "08-ranking\08-ranking.csproj", "{81B1F679-8658-466C-BCEA-9860A79E895E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-forcebook", "10-forcebook\10-forcebook.csproj", "{70BD392E-00B6-491B-8334-EE554EE36E66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-softuni-exam-results", "09-softuni-exam-results\09-softuni-exam-results.csproj", "{4649567E-09E7-4592-9B2D-129B7F922CCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{70BD392E-00B6-491B-8334-EE554EE36E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70BD392E-00B6-491B-8334-EE554EE36E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70BD392E-00B6-491B-8334-EE554EE36E66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4649567E-09E7-4592-9B2D-129B7F922CCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4649567E-09E7-4592-9B2D-129B7F922CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4649567E-09E7-4592-9B2D-129B7F922CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4649567E-09E7-4592-9B2D-129B7F922CCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
