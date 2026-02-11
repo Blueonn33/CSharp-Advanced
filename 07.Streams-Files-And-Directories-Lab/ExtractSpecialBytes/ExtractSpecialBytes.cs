@@ -1,4 +1,7 @@
-﻿namespace ExtractSpecialBytes
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace ExtractSpecialBytes
 {
     using System;
     using System.IO;
@@ -15,6 +18,23 @@
 
         public static void ExtractBytesFromBinaryFile(string binaryFilePath, string bytesFilePath, string outputPath)
         {
+            byte[] binaryBytes = File.ReadAllBytes(binaryFilePath);
+
+            var specialBytes = File.ReadAllLines(bytesFilePath)
+                .Select(byte.Parse)
+                .ToHashSet();
+
+            List<byte> result = new List<byte>();
+
+            foreach (byte b in binaryBytes)
+            {
+                if (specialBytes.Contains(b))
+                {
+                    result.Add(b);
+                }
+            }
+
+            File.WriteAllBytes(outputPath, result.ToArray());
         }
     }
 }
