@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="01-recursive-array-sum/01-recursive-array-sum.csproj" />
+  <Project Path="02-recursive-factorial/02-recursive-factorial.csproj" />
+  <Project Path="03-sum-of-coins/03-sum-of-coins.csproj" />
 </Solution>
