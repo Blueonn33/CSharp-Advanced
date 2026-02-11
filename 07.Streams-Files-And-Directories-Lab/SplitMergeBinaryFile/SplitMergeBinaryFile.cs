@@ -1,6 +1,7 @@
 ﻿namespace SplitMergeBinaryFile
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
 
@@ -19,10 +20,37 @@
 
         public static void SplitBinaryFile(string sourceFilePath, string partOneFilePath, string partTwoFilePath)
         {
+            byte[] bytes = File.ReadAllBytes(sourceFilePath);
+
+            int firstPartSize = bytes.Length / 2;
+
+            if (bytes.Length % 2 == 1)
+            {
+                firstPartSize++; 
+            }
+
+            byte[] partOne = new byte[firstPartSize];
+            byte[] partTwo = new byte[bytes.Length - firstPartSize];
+
+            Array.Copy(bytes, 0, partOne, 0, firstPartSize);
+            Array.Copy(bytes, firstPartSize, partTwo, 0, partTwo.Length);
+
+            File.WriteAllBytes(partOneFilePath, partOne);
+            File.WriteAllBytes(partTwoFilePath, partTwo);
         }
 
         public static void MergeBinaryFiles(string partOneFilePath, string partTwoFilePath, string joinedFilePath)
         {
+            byte[] partOne = File.ReadAllBytes(partOneFilePath);
+            byte[] partTwo = File.ReadAllBytes(partTwoFilePath);
+
+            byte[] merged = new byte[partOne.Length + partTwo.Length];
+
+            Array.Copy(partOne, 0, merged, 0, partOne.Length);
+            Array.Copy(partTwo, 0, merged, partOne.Length, partTwo.Length);
+
+            File.WriteAllBytes(joinedFilePath, merged);
         }
+
     }
 }
